@@ -13,7 +13,7 @@ export class AppComponent implements OnInit {
   load_face_live = false;
   ngOnInit(): void {
     Amplify.configure(awsconfig);
-    Auth.configure(awsconfig);
+    // Auth.configure(awsconfig);
     Hub.listen('auth', this.listener)
     this.load_face_live = true;
     console.log('component-loaded')
@@ -35,5 +35,5 @@ export class AppComponent implements OnInit {
     }
   };
 
-  
+
 }

@@ -40,9 +40,9 @@ export class FaceLivenessComponent implements OnInit {
     const session = this.faceLivenessService.get_current_session().then(data => {
       AWS.config.credentials = new AWS.CognitoIdentityCredentials({
         IdentityPoolId: awsmobile['aws_cognito_identity_pool_id'],
-        Logins: {
-          [cognito_endpoint]: data.getIdToken().getJwtToken()
-        }
+        // Logins: {
+        //   [cognito_endpoint]: data.getIdToken().getJwtToken()
+        // }
       });
 
       this.get_liveness_session()

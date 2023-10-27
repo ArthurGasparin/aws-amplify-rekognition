@@ -10,7 +10,7 @@ export class LivenessService {
   public liveness_session: BehaviorSubject<[string, {}]> = new BehaviorSubject<[string, {}]>(['empty', {}]);
 
   async get_current_session() {
-    return (await Auth.currentSession())
+    return 'us-east-1:12edc397-37d5-4478-9fc1-9e9386053567'
   }
 
 
